@@ -1,128 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor's Portfolio</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Cardoso — Front-End Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">
-            <span class="text1">"Web</span>
-            <span class="text2">Front-End"</span>
+  <!-- Header -->
+  <header class="header" id="top">
+    <a href="#top" class="logo">vc<span>.</span></a>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="#about"  data-en="About"    data-pt="Sobre">About</a></li>
+        <li><a href="#skills" data-en="Skills"   data-pt="Habilidades">Skills</a></li>
+        <li><a href="#projects" data-en="Projects" data-pt="Projetos">Projects</a></li>
+        <li><a href="#contact" data-en="Contact"  data-pt="Contato">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+      <span id="langLabel">PT</span>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow" data-en="Available for internship &amp; full-time" data-pt="Disponível para estágio &amp; tempo integral">Available for internship &amp; full-time</p>
+        <h1>
+          <span class="name">Victor Cardoso</span>
+          <em class="role" data-en="Front-End Developer" data-pt="Desenvolvedor Front-End">Front-End Developer</em>
+        </h1>
+        <p class="hero-bio" data-en="Building clean, fast and thoughtful web interfaces from Brazil — aiming global." data-pt="Criando interfaces web limpas, rápidas e bem pensadas, do Brasil para o mundo.">Building clean, fast and thoughtful web interfaces from Brazil — aiming global.</p>
+        <div class="hero-cta">
+          <a href="cv/victor.cardoso2026en.pdf" class="btn-primary" download data-en="Download CV" data-pt="Baixar CV">Download CV</a>
+          <a href="#contact" class="btn-ghost" data-en="Say hello →" data-pt="Diga olá →">Say hello →</a>
         </div>
-        <nav>
-            <ul class="nav-bar">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="mailto:victorcardosods7@gmail.com" target="_blank">Contact</a></li>
-                <li><a href="https://github.com/v1ctorx" target="_blank">GitHub</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- HERO -->
-    <div class="container">
-        <section class="hero">
-            <p class="hero-tag">— Available to Internship & full-time</p>
-            <h1>Hi, I'm Victor<span class="h12"> Web Developer</span></h1>
-            <a href="cv/victor.cardoso2026en.pdf" class="btn" download>Download CV</a>
-            <div class="social-icons">
-                <a href="https://github.com/v1ctorx" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:victorcardosods7@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/victor-cardoso-62258b216/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.tiktok.com/@victorcdev" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-        </section>
-        <section class="image">
-            <img src="image/Gemini_Generated_Image_r7p3cqr7p3cqr7p3.png" width="250px" alt="Profile picture CV">
-        </section>
-    </div>
-
-    <!-- ABOUT ME -->
-    <div class="about-me" id="about">
-        <h2>About Me</h2>
-        <p>I'm a Systems Analysis and Development student from Brazil, focused on front-end development and evolving into full-stack. I build interfaces using <span class="hmlt5-color">HTML5</span>, <span class="css3-color">CSS3</span>, and <span class="jscript-color">JavaScript</span>, with a strong focus on clean design and user experience.
-        I've been passionate about technology since I was young, which led me to explore how systems work and create my own projects. Today, I'm focused on improving my skills, building real-world applications, and preparing to work internationally as a developer.</p>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="skills" id="skills">
-        <h2>Skills</h2>
-        <div class="contcard">
-            <div class="card">
-                <div class="card-icon"><i class="fa-brands fa-html5" style="color:#E44D26;"></i></div>
-                <div class="title">HTML5</div>
-                <div class="text">Semantic markup, accessibility, SEO-friendly structure and modern web standards.</div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fa-brands fa-css3-alt" style="color:#2965F1;"></i></div>
-                <div class="title">CSS3</div>
-                <div class="text">Responsive layouts, animations, Flexbox, Grid and modern design systems.</div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fa-brands fa-js" style="color:#F7DF1E;"></i></div>
-                <div class="title">JavaScript</div>
-                <div class="text">DOM manipulation, async programming, APIs and interactive web experiences.</div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
-            </div>
+        <div class="social-row">
+          <a href="https://github.com/v1ctorx" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:victorcardosods7@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/victor-cardoso-62258b216/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.tiktok.com/@victorcdev" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-    </div>
-
-    <!-- SERVICES -->
-    <div class="services" id="services">
-        <h2>Services</h2>
-        <div class="contcard">
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                <div class="title">Web Development</div>
-                <div class="text">Building modern, responsive websites and web applications from scratch using HTML, CSS and JavaScript.</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                <div class="title">Responsive Design</div>
-                <div class="text">Crafting pixel-perfect layouts that look great on every device — from mobile to widescreen.</div>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                <div class="title">UI/UX Design</div>
-                <div class="text">Designing clean, intuitive interfaces with a focus on user experience and visual hierarchy.</div>
-            </div>
+      </div>
+      <div class="hero-image">
+        <div class="avatar-wrap">
+          <img src="image/Gemini_Generated_Image_r7p3cqr7p3cqr7p3.png" alt="Victor Cardoso" />
         </div>
+      </div>
     </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <div class="contact-section" id="contact">
-        <h2>Get In Touch</h2>
-        <p class="contact-sub">Have a project in mind or just want to say hello? My inbox is always open.</p>
-        <div class="contact-cards">
-            <a href="mailto:victorcardosods7@gmail.com" class="contact-card" target="_blank">
-                <i class="fa-solid fa-envelope"></i>
-                <span>victorcardosods7@gmail.com</span>
-            </a>
-            <a href="https://github.com/v1ctorx" class="contact-card" target="_blank">
-                <i class="fa-brands fa-github"></i>
-                <span>github.com/v1ctorx</span>
-            </a>
-            <a href="https://www.linkedin.com/in/victor-cardoso-62258b216/" class="contact-card" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-                <span>linkedin.com/in/victor-cardoso</span>
-            </a>
+  <!-- Anout Me -->
+  <section class="section about-section" id="about">
+    <div class="section-inner">
+      <span class="section-label" data-en="About me" data-pt="Sobre mim">About me</span>
+      <h2 data-en="Who I am" data-pt="Quem sou eu">Who I am</h2>
+      <div class="about-grid">
+        <p class="about-text" data-en="I'm a Systems Analysis and Development student from Brazil, focused on front-end development and evolving into full-stack. I build interfaces using <strong>HTML5</strong>, <strong>CSS3</strong> and <strong>JavaScript</strong>, with a strong focus on clean design and user experience." data-pt="Sou estudante de Análise e Desenvolvimento de Sistemas no Brasil, focado em desenvolvimento front-end e evoluindo para full-stack. Crio interfaces com <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong>, com foco em design limpo e experiência do usuário.">
+          I'm a Systems Analysis and Development student from Brazil, focused on front-end development and evolving into full-stack. I build interfaces using <strong>HTML5</strong>, <strong>CSS3</strong> and <strong>JavaScript</strong>, with a strong focus on clean design and user experience.
+        </p>
+        <p class="about-text" data-en="I've been passionate about technology since childhood, which led me to explore how systems work and build my own projects. Today I'm improving my skills, shipping real-world applications and preparing to work internationally as a developer." data-pt="Sou apaixonado por tecnologia desde criança, o que me levou a explorar como os sistemas funcionam e criar meus próprios projetos. Hoje estou aprimorando minhas habilidades, desenvolvendo aplicações reais e me preparando para atuar internacionalmente como desenvolvedor.">
+          I've been passionate about technology since childhood, which led me to explore how systems work and build my own projects. Today I'm improving my skills, shipping real-world applications and preparing to work internationally as a developer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills-section" id="skills">
+    <div class="section-inner">
+      <span class="section-label" data-en="What I know" data-pt="O que eu sei">What I know</span>
+      <h2 data-en="Skills" data-pt="Habilidades">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-html5" style="color:#E44D26;"></i>
+            <span class="skill-name">HTML5</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <p class="skill-desc" data-en="Semantic markup, accessibility, SEO structure." data-pt="Marcação semântica, acessibilidade, estrutura SEO.">Semantic markup, accessibility, SEO structure.</p>
+          <div class="bar"><div class="bar-fill" style="--w:90%"></div></div>
         </div>
-    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>Designed & built with hmlt4 and css3 by <span style="color: var(--second-color);">Victor Cardoso</span> &copy; 2026</p>
-    </footer>
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-css3-alt" style="color:#2965F1;"></i>
+            <span class="skill-name">CSS3</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <p class="skill-desc" data-en="Responsive layouts, animations, Flexbox &amp; Grid." data-pt="Layouts responsivos, animações, Flexbox &amp; Grid.">Responsive layouts, animations, Flexbox &amp; Grid.</p>
+          <div class="bar"><div class="bar-fill" style="--w:85%"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-js" style="color:#c9a800;"></i>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <p class="skill-desc" data-en="DOM manipulation, APIs, async programming." data-pt="Manipulação de DOM, APIs, programação assíncrona.">DOM manipulation, APIs, async programming.</p>
+          <div class="bar"><div class="bar-fill" style="--w:70%"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-git-alt" style="color:#F05032;"></i>
+            <span class="skill-name">Git</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <p class="skill-desc" data-en="Version control, GitHub workflows, collaboration." data-pt="Controle de versão, fluxos no GitHub, colaboração.">Version control, GitHub workflows, collaboration.</p>
+          <div class="bar"><div class="bar-fill" style="--w:75%"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section projects-section" id="projects">
+    <div class="section-inner">
+      <span class="section-label" data-en="What I've built" data-pt="O que construí">What I've built</span>
+      <h2 data-en="Projects" data-pt="Projetos">Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card featured">
+          <div class="project-badge" data-en="Featured" data-pt="Destaque">Featured</div>
+          <div class="project-content">
+            <h3 data-en="Dia dos Namorados" data-pt="Dia dos Namorados">Dia dos Namorados</h3>
+            <p data-en="An interactive Valentine's Day web experience with animations, a love letter and an interactive proposal card. Built with pure HTML, CSS and JavaScript." data-pt="Uma experiência web interativa para o Dia dos Namorados com animações, carta de amor e cartão de proposta interativo. Criado com HTML, CSS e JavaScript puros.">
+              An interactive Valentine's Day web experience with animations, a love letter and an interactive proposal card. Built with pure HTML, CSS and JavaScript.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://diadosnamorados26.netlify.app/" target="_blank" class="proj-link" data-en="Live site →" data-pt="Ver site →">Live site →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3 data-en="This Portfolio" data-pt="Este Portfólio">This Portfolio</h3>
+            <p data-en="Personal portfolio with bilingual support (EN/PT-BR), clean design, responsive layout and smooth interactions — built from scratch." data-pt="Portfólio pessoal com suporte bilíngue (EN/PT-BR), design limpo, layout responsivo e interações suaves — construído do zero.">
+              Personal portfolio with bilingual support (EN/PT-BR), clean design, responsive layout and smooth interactions — built from scratch.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/v1ctorx" target="_blank" class="proj-link" data-en="GitHub →" data-pt="GitHub →">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner contact-inner">
+      <span class="section-label" data-en="Let's work together" data-pt="Vamos trabalhar juntos">Let's work together</span>
+      <h2 data-en="Get in touch" data-pt="Entre em contato">Get in touch</h2>
+      <p class="contact-sub" data-en="Have a project in mind or just want to say hello? My inbox is always open." data-pt="Tem um projeto em mente ou só quer dizer olá? Minha caixa de entrada está sempre aberta.">Have a project in mind or just want to say hello? My inbox is always open.</p>
+      <div class="contact-links">
+        <a href="mailto:victorcardosods7@gmail.com" class="contact-link" target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+          <span>victorcardosods7@gmail.com</span>
+        </a>
+        <a href="https://github.com/v1ctorx" class="contact-link" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          <span>github.com/v1ctorx</span>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-cardoso-62258b216/" class="contact-link" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>linkedin.com/in/victor-cardoso</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      <span data-en="Designed &amp; built by" data-pt="Desenvolvido por">Designed &amp; built by</span>
+      <strong>Victor Cardoso</strong> &copy; 2026
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
