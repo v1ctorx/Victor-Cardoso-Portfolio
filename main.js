@@ -8,7 +8,6 @@
 
   let lang = 'en';
 
-  // ── Theme ──
   const savedTheme = localStorage.getItem('theme') || 'light';
   html.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
@@ -27,7 +26,7 @@
       : 'fa-solid fa-moon';
   }
 
-  // ── Language ──
+  // Language EN to PTbr
   function applyLang(l) {
     lang = l;
     html.setAttribute('lang', l === 'en' ? 'en' : 'pt-BR');
@@ -49,7 +48,6 @@
     applyLang(lang === 'en' ? 'pt' : 'en');
   });
 
-  // ── Mobile menu ──
   const menuBtn = document.createElement('button');
   menuBtn.className = 'menu-btn';
   menuBtn.setAttribute('aria-label', 'Toggle menu');
@@ -71,7 +69,6 @@
     });
   });
 
-  // ── Nav active highlight ──
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-bar a[href^="#"]');
 
