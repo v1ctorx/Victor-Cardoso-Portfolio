@@ -5,10 +5,15 @@
   const nav       = document.querySelector('nav');
   const themeBtn  = document.getElementById('themeToggle');
   const themeIcon = document.getElementById('themeIcon');
-
   let lang = 'en';
 
-  const savedTheme = localStorage.getItem('theme') || 'light';
+  // --- Theme setup (guarded: localStorage can throw on file:// or restricted contexts) ---
+  let savedTheme = 'light';
+  try {
+    savedTheme = localStorage.getItem('theme') || 'light';
+  } catch (e) {
+    console.warn('localStorage unavailable, defaulting to light theme:', e);
+  }
   html.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
@@ -16,7 +21,11 @@
     const current = html.getAttribute('data-theme');
     const next = current === 'light' ? 'dark' : 'light';
     html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {
+      console.warn('Could not persist theme:', e);
+    }
     updateThemeIcon(next);
   });
 
@@ -26,18 +35,15 @@
       : 'fa-solid fa-moon';
   }
 
-  // Language EN to PTbr
+  // --- Language EN <-> PT ---
   function applyLang(l) {
     lang = l;
     html.setAttribute('lang', l === 'en' ? 'en' : 'pt-BR');
     langLabel.textContent = l === 'en' ? 'PT' : 'EN';
-
     document.querySelectorAll('[data-en]').forEach(el => {
       const val = el.getAttribute('data-' + l);
       if (val !== null) {
-        if (el.tagName === 'P' && el.innerHTML.includes('<strong>')) {
-          el.innerHTML = val;
-        } else if (['P','H1','H2','H3','SPAN','EM','A'].includes(el.tagName)) {
+        if (['P', 'H1', 'H2', 'H3', 'SPAN', 'EM', 'A'].includes(el.tagName)) {
           el.innerHTML = val;
         }
       }
@@ -48,6 +54,7 @@
     applyLang(lang === 'en' ? 'pt' : 'en');
   });
 
+  // --- Mobile menu ---
   const menuBtn = document.createElement('button');
   menuBtn.className = 'menu-btn';
   menuBtn.setAttribute('aria-label', 'Toggle menu');
@@ -69,21 +76,24 @@
     });
   });
 
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-bar a[href^="#"]');
-
-  const navObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(a => {
-          a.style.color = '';
-          if (a.getAttribute('href') === '#' + entry.target.id) {
-            a.style.color = 'var(--accent)';
-          }
-        });
-      }
-    });
-  }, { threshold: 0.4 });
-
-  sections.forEach(s => navObserver.observe(s));
+  // --- Scroll-spy nav highlighting (guarded: IntersectionObserver may be unsupported) ---
+  try {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-bar a[href^="#"]');
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => {
+            a.style.color = '';
+            if (a.getAttribute('href') === '#' + entry.target.id) {
+              a.style.color = 'var(--accent)';
+            }
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => navObserver.observe(s));
+  } catch (e) {
+    console.warn('IntersectionObserver not available, skipping scroll-spy:', e);
+  }
 })();
