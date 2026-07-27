@@ -3,10 +3,31 @@
   const toggle    = document.getElementById('langToggle');
   const langLabel = document.getElementById('langLabel');
   const nav       = document.querySelector('nav');
+  const themeBtn  = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
 
   let lang = 'en';
 
+  // ── Theme ──
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
 
+  themeBtn.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeIcon(next);
+  });
+
+  function updateThemeIcon(theme) {
+    themeIcon.className = theme === 'dark'
+      ? 'fa-solid fa-sun'
+      : 'fa-solid fa-moon';
+  }
+
+  // ── Language ──
   function applyLang(l) {
     lang = l;
     html.setAttribute('lang', l === 'en' ? 'en' : 'pt-BR');
@@ -15,13 +36,9 @@
     document.querySelectorAll('[data-en]').forEach(el => {
       const val = el.getAttribute('data-' + l);
       if (val !== null) {
-       
         if (el.tagName === 'P' && el.innerHTML.includes('<strong>')) {
           el.innerHTML = val;
-        } else if (el.tagName === 'P' || el.tagName === 'H1' ||
-                   el.tagName === 'H2' || el.tagName === 'H3' ||
-                   el.tagName === 'SPAN' || el.tagName === 'EM' ||
-                   el.tagName === 'A') {
+        } else if (['P','H1','H2','H3','SPAN','EM','A'].includes(el.tagName)) {
           el.innerHTML = val;
         }
       }
@@ -32,6 +49,7 @@
     applyLang(lang === 'en' ? 'pt' : 'en');
   });
 
+  // ── Mobile menu ──
   const menuBtn = document.createElement('button');
   menuBtn.className = 'menu-btn';
   menuBtn.setAttribute('aria-label', 'Toggle menu');
@@ -53,22 +71,8 @@
     });
   });
 
-  const fills = document.querySelectorAll('.bar-fill');
-  fills.forEach(f => { f.style.width = '0'; });
-
-  const skillObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        target.style.width = target.style.getPropertyValue('--w') || target.dataset.w;
-        skillObserver.unobserve(target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  fills.forEach(f => skillObserver.observe(f));
-
-  const sections = document.querySelectorAll('section[id], div[id]');
+  // ── Nav active highlight ──
+  const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-bar a[href^="#"]');
 
   const navObserver = new IntersectionObserver(entries => {
