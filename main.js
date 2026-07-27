@@ -7,7 +7,6 @@
   const themeIcon = document.getElementById('themeIcon');
   let lang = 'en';
 
-  // --- Theme setup (guarded: localStorage can throw on file:// or restricted contexts) ---
   let savedTheme = 'light';
   try {
     savedTheme = localStorage.getItem('theme') || 'light';
@@ -35,7 +34,6 @@
       : 'fa-solid fa-moon';
   }
 
-  // --- Language EN <-> PT ---
   function applyLang(l) {
     lang = l;
     html.setAttribute('lang', l === 'en' ? 'en' : 'pt-BR');
@@ -54,7 +52,6 @@
     applyLang(lang === 'en' ? 'pt' : 'en');
   });
 
-  // --- Mobile menu ---
   const menuBtn = document.createElement('button');
   menuBtn.className = 'menu-btn';
   menuBtn.setAttribute('aria-label', 'Toggle menu');
@@ -76,7 +73,7 @@
     });
   });
 
-  // --- Scroll-spy nav highlighting (guarded: IntersectionObserver may be unsupported) ---
+  
   try {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-bar a[href^="#"]');
