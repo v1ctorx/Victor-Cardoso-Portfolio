@@ -178,7 +178,7 @@ h1 {
   font-family: var(--font-disp);
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.15rem;
   line-height: 1.05;
 }
 
@@ -190,11 +190,12 @@ h1 {
 }
 
 .role {
-  font-size: 44px;
+  font-size: 36px;
   font-weight: 300;
   font-style: italic;
   color: var(--accent);
   letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .hero-bio {
@@ -303,7 +304,7 @@ h1 {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 .about-text {
   font-size: 15px;
@@ -327,7 +328,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  transition: all var(--transition);
+  transition: border-color var(--transition), transform var(--transition);
 }
 .skill-card:hover {
   border-color: var(--accent);
@@ -357,27 +358,29 @@ h1 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
 }
 
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 1.1rem 1.25rem;
+  padding: 1.25rem 1.4rem;
   display: flex;
   flex-direction: column;
-  gap: 0;
-  transition: all var(--transition);
+  transition: border-color var(--transition), transform var(--transition);
   position: relative;
-  overflow: hidden;
 }
 .project-card:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
 }
-.project-card.featured {
+
+/* Only one project at a time carries the pinned/featured treatment,
+   so the badge stays meaningful instead of appearing on every card. */
+.project-card.pinned {
   border-color: var(--accent);
   background: var(--accent-dim);
 }
@@ -392,8 +395,14 @@ h1 {
   color: #fff;
   padding: 0.15rem 0.55rem;
   border-radius: 99px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   align-self: flex-start;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-content h3 {
@@ -401,7 +410,7 @@ h1 {
   font-size: 17px;
   font-weight: 400;
   color: var(--ink);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.45rem;
   letter-spacing: -0.01em;
 }
 
@@ -409,14 +418,14 @@ h1 {
   font-size: 13px;
   color: var(--ink-2);
   line-height: 1.65;
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.9rem;
 }
 
 .project-tags {
   display: flex;
   gap: 0.35rem;
   flex-wrap: wrap;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.9rem;
 }
 .project-tags span {
   font-size: 10px;
@@ -464,7 +473,7 @@ h1 {
   color: var(--ink);
   font-size: 14px;
   background: var(--surface);
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), transform var(--transition);
 }
 .contact-link i {
   font-size: 16px;
@@ -505,9 +514,9 @@ h1 {
   .hero-section { padding: 4rem 1.5rem 3rem; }
   .hero-inner { justify-content: flex-start; }
   .name { font-size: 44px; }
-  .role { font-size: 34px; }
+  .role { font-size: 28px; }
   .section { padding: 4rem 1.5rem; }
-  .about-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .section h2 { font-size: 32px; }
 }
 
@@ -527,7 +536,7 @@ h1 {
   nav.open { display: block; }
   .nav-bar { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .name { font-size: 36px; }
-  .role { font-size: 28px; }
+  .role { font-size: 24px; }
   .skills-grid { grid-template-columns: 1fr; }
   .lang-toggle { padding: 0.25rem 0.6rem; font-size: 10px; }
   .projects-grid { grid-template-columns: 1fr; }
