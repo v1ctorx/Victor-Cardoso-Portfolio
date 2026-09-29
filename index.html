@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Cardoso — Front-End Developer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" /> <!--CSS Folder / Pasta do CSS-->
+
+</head>
+<body>
+
+  <!-- Header / Cabeçalho -->
+  <header class="header" id="top">
+
+    <a href="#top" class="logo">
+      <span class="logo-v">v</span><span class="logo-c">c</span><span class="logo-dot">.</span>
+    </a>
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="#about"    data-en="About"    data-pt="Sobre">About</a></li>
+        <li><a href="#skills"   data-en="Skills"   data-pt="Habilidades">Skills</a></li>
+        <li><a href="#projects" data-en="Projects" data-pt="Projetos">Projects</a></li>
+        <li><a href="#contact"  data-en="Contact"  data-pt="Contato">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <span id="langLabel">PT</span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- Hero Section / Seção Hero -->
+  <section class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow" data-en="Available for internship &amp; full-time" data-pt="Disponível para estágio &amp; tempo integral">Available for internship &amp; full-time</p>
+        <h1>
+          <span class="name">Victor Cardoso</span>
+          <em class="role" data-en="Front-End Developer, Full-Stack in progress" data-pt="Desenvolvedor Front-End, Full-Stack em progresso">Front-End Developer, Full-Stack in progress</em>
+        </h1>
+        <p class="hero-bio" data-en="Building clean, fast and thoughtful web interfaces from Brazil — aiming global." data-pt="Criando interfaces web limpas, rápidas e bem pensadas, do Brasil para o mundo.">Building clean, fast and thoughtful web interfaces from Brazil, aiming global.</p>
+        <div class="hero-cta">
+          <a href="cv/Victor-Cardoso.2026EN.pdf" class="btn-primary" download data-en="Download CV" data-pt="Baixar CV">Download CV</a>
+          <a href="#contact" class="btn-ghost" data-en="Say hello →" data-pt="Diga olá →">Say hello →</a>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/v1ctorx" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:victorcardosods7@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/victor-cardoso-62258b216/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.tiktok.com/@victorcdev" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@Front-EndVictor/shorts" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- About Me / Sobre Mim -->
+
+  <section class="section about-section" id="about">
+    <div class="section-inner">
+      <span class="section-label" data-en="About me" data-pt="Sobre mim">About me</span>
+
+      <h2 data-en="Who I am" data-pt="Quem sou eu">Who I am</h2>
+      <div class="about-grid">
+        <p
+          class="about-text"
+          data-en="I'm a Systems Analysis and Development student from Brazil, focused on Front-End Development and continuously expanding my skills toward Full-Stack Development. I build modern and responsive interfaces using <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, and I'm currently expanding my knowledge of <strong>Tailwind CSS</strong>, always focusing on clean code, usability, and user experience."
+          data-pt="Sou estudante de Análise e Desenvolvimento de Sistemas no Brasil, focado em Desenvolvimento Front-End e expandindo continuamente meus conhecimentos em direção ao Full-Stack. Desenvolvo interfaces modernas e responsivas utilizando <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> e atualmente estou ampliando meus conhecimentos em <strong>Tailwind CSS</strong>, sempre buscando código organizado, usabilidade e uma boa experiência do usuário.">
+          I'm a Systems Analysis and Development student from Brazil, focused on Front-End Development and continuously expanding my skills toward Full-Stack Development. I build modern and responsive interfaces using <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, and I'm currently expanding my knowledge of <strong>Tailwind CSS</strong>, always focusing on clean code, usability, and user experience.</p>
+
+        <p class="about-text" data-en="My passion for technology started at an early age and grew through curiosity, experimentation, and building projects of my own. Today, I learn by creating, turning ideas into functional applications and continuously improving my development skills. I'm looking forward to joining a professional environment where I can contribute, learn from experienced developers, and grow as a software developer."
+          data-pt="Minha paixão por tecnologia começou cedo e cresceu através da curiosidade, da experimentação e da criação dos meus próprios projetos. Hoje, aprendo colocando a mão na massa, transformando ideias em aplicações funcionais e aprimorando continuamente minhas habilidades de desenvolvimento. Busco fazer parte de um ambiente profissional onde eu possa contribuir, aprender com desenvolvedores experientes e crescer como desenvolvedor de software.">
+          My passion for technology started at an early age and grew through curiosity, experimentation, and building projects of my own. Today, I learn by creating, turning ideas into functional applications and continuously improving my development skills. I'm looking forward to joining a professional environment where I can contribute, learn from experienced developers, and grow as a software developer.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Skills/ Habilidades -->
+  <section class="section skills-section" id="skills">
+    <div class="section-inner">
+      <span class="section-label" data-en="What I know" data-pt="O que eu sei">What I know</span>
+      <h2 data-en="Skills" data-pt="Habilidades">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-html5" style="color:#E44D26;"></i>
+            <span class="skill-name">HTML5</span>
+          </div>
+          <p class="skill-desc" data-en="Semantic markup, accessibility, SEO structure." data-pt="Marcação semântica, acessibilidade, estrutura SEO.">Semantic markup, accessibility, SEO structure.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-css3-alt" style="color:#2965F1;"></i>
+            <span class="skill-name">CSS3</span>
+          </div>
+          <p class="skill-desc" data-en="Responsive layouts, animations, Flexbox &amp; Grid." data-pt="Layouts responsivos, animações, Flexbox &amp; Grid.">Responsive layouts, animations, Flexbox &amp; Grid.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-tailwind-css" style="color:#38BDF8"></i>
+            <span class="skill-name">Tailwind CSS</span>
+          </div>
+          <p class="skill-desc" data-en="Utility-first styling, rapid prototyping, custom design systems." data-pt="Estilização utility-first, prototipagem rápida, sistemas de design customizados.">Utility-first styling, rapid prototyping, custom design systems.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-js" style="color:#c9a800;"></i>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <p class="skill-desc" data-en="DOM manipulation, APIs, async programming." data-pt="Manipulação de DOM, APIs, programação assíncrona.">DOM manipulation, APIs, async programming.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fa-brands fa-git-alt" style="color:#F05032;"></i>
+            <span class="skill-name">Git</span>
+          </div>
+          <p class="skill-desc" data-en="Version control, GitHub workflows, collaboration." data-pt="Controle de versão, fluxos no GitHub, colaboração.">Version control, GitHub workflows, collaboration.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects/ Projetos -->
+  <section class="section projects-section" id="projects">
+    <div class="section-inner">
+      <span class="section-label" data-en="What I've built" data-pt="O que construí">What I've built</span>
+      <h2 data-en="Projects" data-pt="Projetos">Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Primary project / Projeto principal -->
+        <article class="project-card pinned">
+          <div class="project-badge" data-en="Featured" data-pt="Destaque">Featured</div>
+          <div class="project-content">
+            <h3 data-en="Dia dos Namorados" data-pt="Dia dos Namorados">Dia dos Namorados</h3>
+            <p data-en="An interactive Valentine's Day web experience with animations, a love letter and an interactive proposal card. Built with pure HTML, CSS and JavaScript." data-pt="Uma experiência web interativa para o Dia dos Namorados com animações, carta de amor e cartão de proposta interativo. Criado com HTML, CSS e JavaScript puros.">
+              An interactive Valentine's Day web experience with animations, a love letter and an interactive proposal card. Built with pure HTML, CSS and JavaScript.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://diadosnamorados26.netlify.app/" target="_blank" class="proj-link" data-en="Live site →" data-pt="Ver site →">Live site →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- New project / Novo projeto -->
+        <!-- NOTE: placeholder title/description/tags below — the live URL is
+             password/auth protected so its real content couldn't be read.
+             Replace with the real name, description and tags. -->
+        <article class="project-card">
+          <div class="project-content">
+            <h3 data-en="Project Car" data-pt="Project Car">Project Car</h3>
+            <p data-en="A web project built with HTML, CSS and JavaScript — description to be updated." data-pt="Um projeto web criado com HTML, CSS e JavaScript — descrição a ser atualizada.">
+              A web project built with HTML, CSS and JavaScript — description to be updated.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://projectcar123.netlify.app/" target="_blank" class="proj-link" data-en="Live site →" data-pt="Ver site →">Live site →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- To-Do List -->
+        <article class="project-card">
+          <div class="project-content">
+            <h3 data-en="To-Do List" data-pt="To-Do List">To-Do List</h3>
+            <p data-en="A responsive task manager with data persistence via LocalStorage, built to practice DOM manipulation, event handling and programming logic." data-pt="Um gerenciador de tarefas responsivo com persistência de dados via LocalStorage, criado para praticar manipulação de DOM, eventos e lógica de programação.">
+              A responsive task manager with data persistence via LocalStorage, built to practice DOM manipulation, event handling and programming logic.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://to-do-list2026fr.netlify.app/" target="_blank" class="proj-link" data-en="Live site →" data-pt="Ver site →">Live site →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Social media links -->
+        <article class="project-card">
+          <div class="project-content">
+            <h3 data-en="Social Media Links" data-pt="Links de Redes Sociais">Social Media Links</h3>
+            <p data-en="A single, shareable landing page collecting all my social and contact links in one place." data-pt="Uma página única e compartilhável reunindo todos os meus links de contato e redes sociais em um só lugar.">
+              A single, shareable landing page collecting all my social and contact links in one place.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://victordevlinks.netlify.app/" target="_blank" class="proj-link" data-en="Live site →" data-pt="Ver site →">Live site →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- This portfolio -->
+        <article class="project-card">
+          <div class="project-content">
+            <h3 data-en="This Portfolio" data-pt="Este Portfólio">This Portfolio</h3>
+            <p data-en="Personal portfolio with bilingual support (EN/PT-BR), clean design, responsive layout and smooth interactions — built from scratch." data-pt="Portfólio pessoal com suporte bilíngue (EN/PT-BR), design limpo, layout responsivo e interações suaves — construído do zero.">
+              Personal portfolio with bilingual support (EN/PT-BR), clean design, responsive layout and smooth interactions — built from scratch.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/v1ctorx" target="_blank" class="proj-link" data-en="GitHub →" data-pt="GitHub →">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Contato -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner contact-inner">
+      <span class="section-label" data-en="Let's work together" data-pt="Vamos trabalhar juntos">Let's work together</span>
+      <h2 data-en="Get in touch" data-pt="Entre em contato">Get in touch</h2>
+      <p class="contact-sub" data-en="Have a project in mind or just want to say hello? My inbox is always open." data-pt="Tem um projeto em mente ou só quer dizer olá? Minha caixa de entrada está sempre aberta.">Have a project in mind or just want to say hello? My inbox is always open.</p>
+      <div class="contact-links">
+        <a href="mailto:victorcardosods7@gmail.com" class="contact-link" target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+          <span>victorcardosods7@gmail.com</span>
+        </a>
+        <a href="https://github.com/v1ctorx" class="contact-link" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          <span>github.com/v1ctorx</span>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-cardoso-62258b216/" class="contact-link" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>linkedin.com/in/victor-cardoso</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Rodapé -->
+  <footer class="footer">
+    <p>
+      <span data-en="Designed &amp; built by" data-pt="Desenvolvido por">Designed &amp; built by</span>
+      <strong>Victor Cardoso</strong> &copy; 2026
+    </p>
+  </footer>
+
+  <script src="main.js"></script> <!--JavaScript Folder / Pasta do JavaScript-->
+</body>
+</html>
